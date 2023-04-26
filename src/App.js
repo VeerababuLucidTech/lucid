@@ -14,7 +14,9 @@ import LoginForm from './pages/LoginForm';
 
 const App = () => {
   return (
+    
     <BrowserRouter>
+    
       <Sidebar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
