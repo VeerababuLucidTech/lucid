@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Tabs from "../components/Tabs";
+import Tabs from "../components/TenantTabs";
 // import Tenants from '../components/Tenants.json';
 
 function Users(props) {

@@ -41,6 +41,4 @@ function Example() {
     </div>
   );
 }
-
-// render(<Example />);
 export default Example;

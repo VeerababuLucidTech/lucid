@@ -1,8 +1,10 @@
 import Table from "react-bootstrap/Table";
-import Tabs from "../components/Tabs";
+import Tabs from "../components/TenantTabs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Example from "../components/TableOffCanvas";
+import TenantWidget from "../components/widget/TenantWidget";
+import TenantTabs from "../components/TenantTabs";
 
 function TenantsTable(props) {
   const [data, setData] = useState([]);
@@ -13,8 +15,8 @@ function TenantsTable(props) {
   }, []);
   return (
     <div>
-      <Tabs></Tabs>
-
+      <TenantWidget></TenantWidget>
+      <TenantTabs></TenantTabs>
       <Table responsive hover>
         <thead>
           <tr>
@@ -29,7 +31,16 @@ function TenantsTable(props) {
           data.map((items) => (
             <tbody>
               <tr style={{ cursor: "pointer" }}>
-                <td>{items.name}</td>
+                <td>
+                  <div class="form-check fs-0 mb-0">
+                    <input
+                      // title="Toggle All Rows Selected"
+                      type="checkbox"
+                      class="form-check-input"
+                    />
+                    {items.name}
+                  </div>
+                </td>
                 <td>{items.name}</td>
                 <td>{items.username}</td>
                 <td>{items.email}</td>
